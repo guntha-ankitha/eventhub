@@ -245,25 +245,13 @@ Low Priority
 
 # 8. Entry Criteria
 
-Testing begins when
-
-* Requirements approved
-* QA build deployed
-* APIs available
-* Test Data ready
-* Test Environment ready
+We can start once requirements are signed off, the QA build is deployed, APIs are reachable, test data is prepared, and the environment is stable.
 
 ---
 
 # 9. Exit Criteria
 
-Testing ends when
-
-* 100% planned test cases executed
-* Critical defects closed
-* High severity defects closed or accepted
-* Regression passed
-* Test Summary Report completed
+Testing is done when all planned test cases have been run. There should be no open critical defects. High-severity defects must either be fixed or officially accepted by the team. Regression testing must pass. And the test summary report must be completed.
 
 ---
 
