@@ -235,7 +235,7 @@ Low Priority
 | OS        | Windows 11            |
 | Browser   | Chrome, Edge, Firefox |
 | Java      | JDK 21                |
-| Selenium  | Latest                |
+| Selenium  | Latest 3.14           |
 | API Tool  | Postman               |
 | DB        | PostgreSQL            |
 | Build     | QA                    |
