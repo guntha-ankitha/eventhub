@@ -257,119 +257,44 @@ Testing is done when all planned test cases have been run. There should be no op
 
 # 10. Test Deliverables
 
-* Test Plan
-* Test Strategy
-* Test Scenarios
-* Test Cases
-* API Collection
-* Automation Scripts
-* Bug Report
-* Test Execution Report
-* RTM
-* Test Summary Report
+Test plan, test scenarios and cases, the Postman collection, automation scripts, bug reports, execution reports, the RTM (requirement traceability matrix), and the final test summary report.
 
 ---
 
 # 11. Defect Management
 
-Tool
+Bugs are logged and tracked in Jira, following the standard lifecycle:
 
-* Jira
+New → Assigned → In Progress → Fixed → Retest → Closed
 
-Bug Lifecycle
-
-New
-
-↓
-
-Assigned
-
-↓
-
-In Progress
-
-↓
-
-Fixed
-
-↓
-
-Retest
-
-↓
-
-Closed
-
-Rejected / Duplicate / Deferred whenever applicable
+(with Rejected, Duplicate, or Deferred as alternate paths where applicable)
 
 ---
 
-# 12. Automation Scope
+# 12. Coverage Summary
 
-| Module            | Automate |
-| ----------------- | -------- |
-| Login             | ✅        |
-| Registration      | ✅        |
-| Event Creation    | ✅        |
-| Booking           | ✅        |
-| Booking Reference | ✅        |
-| Price Validation  | ✅        |
-| Pagination        | ✅        |
-| Seat Validation   | ✅        |
-| Cancellation      | ✅        |
-| Clear Bookings    | ✅        |
+Automated: Login, registration, event creation, booking, booking reference, price validation, pagination, seat validation, cancellation, clear bookings.
+Manual Test coverage:login, registration, and creating events. It also covers event limits and FIFO logic. Sandbox isolation, booking, and refund eligibility are tested manually too. So are the warning banner, pagination, seat count, and price..
+API Coverage:The POST /login API is tested for user login, and POST /signup is tested for registration. GET /events verifies the event listing, while POST /events verifies event creation. Booking is tested through POST /bookings, cancelling a single booking uses DELETE /booking, and clearing all bookings at once uses DELETE /bookings.
 
 ---
 
-# 13. Manual Test Coverage
+# 13. Business Rules Validation Checklist
 
-| Requirement        | Manual |
-| ------------------ | ------ |
-| Login              | ✅      |
-| Registration       | ✅      |
-| Event Creation     | ✅      |
-| Event Limit        | ✅      |
-| FIFO               | ✅      |
-| Sandbox Isolation  | ✅      |
-| Booking            | ✅      |
-| Refund Eligibility | ✅      |
-| Warning Banner     | ✅      |
-| Pagination         | ✅      |
-| Seat Count         | ✅      |
-| Price              | ✅      |
-
----
-
-# 14. API Coverage
-
-| API              | Verify       |
-| ---------------- | ------------ |
-| POST /login      | Login        |
-| POST /signup     | Register     |
-| GET /events      | Event List   |
-| POST /events     | Create Event |
-| POST /bookings   | Booking      |
-| DELETE /booking  | Cancel       |
-| DELETE /bookings | Clear All    |
-
----
-
-# 15. Business Rules Validation Checklist
-
-| Business Rule                                    | Manual | API | Automation |
-| ------------------------------------------------ | ------ | --- | ---------- |
-| Booking Reference starts with event title letter | ✅      | ✅   | ✅          |
-| Seat count decreases immediately                 | ✅      | ✅   | ✅          |
-| Price = Quantity × Ticket Price                  | ✅      | ✅   | ✅          |
-| Max 6 Events                                     | ✅      | ✅   | ✅          |
-| FIFO Event Deletion                              | ✅      | ✅   | ✅          |
-| Max 9 Bookings                                   | ✅      | ✅   | ✅          |
-| FIFO Booking Deletion                            | ✅      | ✅   | ✅          |
-| Refund Eligibility                               | ✅      | ❌   | ✅          |
-| Spinner (4 sec)                                  | ✅      | ❌   | ✅          |
-| Sandbox Isolation                                | ✅      | ✅   | ✅          |
-| Static Events Protected                          | ✅      | ✅   | ✅          |
-| Pagination                                       | ✅      | ❌   | ✅          |
+| Business Rule | Manual | API | Automation |
+|---|---|---|---|
+| Booking reference starts with event title letter | ✔ | ✔ | ✔ |
+| Seat count decreases immediately | ✔ | ✔ | ✔ |
+| Price = Quantity × Ticket Price | ✔ | ✔ | ✔ |
+| Max 6 events | ✔ | ✔ | ✔ |
+| FIFO event deletion | ✔ | ✔ | ✔ |
+| Max 9 bookings | ✔ | ✔ | ✔ |
+| FIFO booking deletion | ✔ | ✔ | ✔ |
+| Refund eligibility | ✔ | ✘ | ✔ |
+| Spinner (4 sec) | ✔ | ✘ | ✔ |
+| Sandbox isolation | ✔ | ✔ | ✔ |
+| Static events protected | ✔ | ✔ | ✔ |
+| Pagination | ✔ | ✘ | ✔ |
 
 ---
 
