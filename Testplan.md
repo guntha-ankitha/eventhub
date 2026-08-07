@@ -9,9 +9,9 @@
 | Project          | EventHub                   |
 | Module           | Event Management & Booking |
 | Version          | 1.0                        |
-| Prepared By      | Senior QA Engineer         |
+| Prepared By      | Guntha Ankitha             |
 | Testing Type     | Manual + Automation        |
-| Test Level       | System Testing             |
+| Test Level       | Regression Testing         |
 | Test Environment | QA                         |
 
 ---
