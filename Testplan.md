@@ -273,11 +273,11 @@ New → Assigned → In Progress → Fixed → Retest → Closed
 
 # 12. Coverage Summary
 
-**Automated:** Login, registration, event creation, booking, booking reference, price validation, pagination, seat validation, cancellation, clear bookings.
+Automated: Login, registration, event creation, booking, booking reference, price validation, pagination, seat validation, cancellation, clear bookings.
 
-**Manual Test coverage:**login, registration, and creating events. It also covers event limits and FIFO logic. Sandbox isolation, booking, and refund eligibility are tested manually too. So are the warning banner, pagination, seat count, and price.
+Manual Test coverage:login, registration, and creating events. It also covers event limits and FIFO logic. Sandbox isolation, booking, and refund eligibility are tested manually too. So are the warning banner, pagination, seat count, and price.
 
-**API Coverage:**The POST /login API is tested for user login, and POST /signup is tested for registration. GET /events verifies the event listing, while POST /events verifies event creation. Booking is tested through POST /bookings, cancelling a single booking uses DELETE /booking, and clearing all bookings at once uses DELETE /bookings.
+API Coverage:The POST /login API is tested for user login, and POST /signup is tested for registration. GET /events verifies the event listing, while POST /events verifies event creation. Booking is tested through POST /bookings, cancelling a single booking uses DELETE /booking, and clearing all bookings at once uses DELETE /bookings.
 
 ---
 
